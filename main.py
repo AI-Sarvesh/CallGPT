@@ -137,7 +137,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
 
 @app.get("/")
 async def get():
-    return FileResponse("static/indexmed.html")
+    return FileResponse("indexmed.html")
 
 if __name__ == "__main__":
     import uvicorn
