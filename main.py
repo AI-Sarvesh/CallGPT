@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 OPENAI_API_KEY = "sk-****" # Replace with actual key
 if not OPENAI_API_KEY:
