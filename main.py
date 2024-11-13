@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI()
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 OPENAI_API_KEY = "sk-****" # Replace with actual key
 if not OPENAI_API_KEY:
@@ -137,7 +137,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
 
 @app.get("/")
 async def get():
-    return FileResponse("indexmed.html")
+    return FileResponse("static/indexmed.html")
 
 if __name__ == "__main__":
     import uvicorn
