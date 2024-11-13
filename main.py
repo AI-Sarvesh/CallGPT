@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-OPENAI_API_KEY = "sk-****" # Replace with actual key
+OPENAI_API_KEY = "sk-cloudjune-H0RLPEiyk8tHQri0KPArT3BlbkFJM61NxbpwCOhnOJVflWQP" # Replace with actual key
 if not OPENAI_API_KEY:
     raise ValueError("OpenAI API key not found in environment variables")
 
